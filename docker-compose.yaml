@@ -1,0 +1,11 @@
+services:
+  autogenstudio:
+    container_name: autogenstudio
+    ports:
+      - 5555:8000
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./appdir:/opt/appdir
